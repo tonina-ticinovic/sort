@@ -2,8 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Sorter_1 = require("./Sorter");
 const NumbersCollection_1 = require("./NumbersCollection");
+const CharactersCollection_1 = require("./CharactersCollection");
 const numbersCollection = new NumbersCollection_1.NumbersCollection([10, 3, -5, 0, -100]);
 console.log(numbersCollection.data);
-const sorter = new Sorter_1.Sorter(numbersCollection);
-sorter.sort();
-console.log(sorter.collection);
+const arbitraryCollection = new CharactersCollection_1.CharactersCollection('Xbaac');
+console.log(arbitraryCollection.data);
+const sorterNumbers = new Sorter_1.Sorter(numbersCollection);
+const sorterString = new Sorter_1.Sorter(arbitraryCollection);
+sorterNumbers.sort();
+sorterString.sort();
+console.log(sorterNumbers.collection);
+console.log(sorterString.collection);
