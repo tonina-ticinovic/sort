@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sorter = void 0;
+// we will use abstract class to define the methods that the child class should implement
+// abstract class can only be parent class and cannot be instantiated
 class Sorter {
-    constructor(collection) {
-        this.collection = collection;
-    } //this is a shorthand way of defining the property and assigning it to the argument
+    constructor() { } //this is a shorthand way of defining the property and assigning it to the argument
     sort() {
-        const length = this.collection.length;
+        const length = this.length;
         // Bubble Sort
         for (let i = 0; i < length; i++) {
             for (let j = 0; j < length - i - 1; j++) {
-                if (this.collection.compare(j, j + 1)) {
-                    this.collection.swap(j, j + 1);
+                if (this.compare(j, j + 1)) {
+                    this.swap(j, j + 1);
                 }
             }
         }
