@@ -2,13 +2,15 @@
 // the last node's next pointer is null
 // linked list has a head node that points to the first node
 
+import { Sorter } from './Sorter';
+
 class Node {
   constructor(public data: number) {}
 
   next: Node | null = null;
 }
 
-export class LinkedList {
+export class LinkedList extends Sorter {
   head: Node | null = null;
 
   add(data: number): void {

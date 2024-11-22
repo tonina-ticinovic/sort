@@ -4,14 +4,16 @@
 // linked list has a head node that points to the first node
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
+const Sorter_1 = require("./Sorter");
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Sorter_1.Sorter {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
